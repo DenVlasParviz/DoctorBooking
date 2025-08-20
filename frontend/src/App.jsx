@@ -8,12 +8,15 @@ import Appointments from "./pages/User/Appointments.jsx";
 import { Navbar } from "./components/Navbar.jsx";
 import MyAppointments from "./pages/User/MyAppointments.jsx";
 import Profile from "./pages/User/Profile.jsx"
+import 'react-toastify/dist/ReactToastify.css'
 
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
+import {ToastContainer} from "react-toastify";
 function App() {
   return (
     <div className="mx-4 sm:mx-[10%]">
+        <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
