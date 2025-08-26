@@ -81,39 +81,39 @@ npm run dev
 ## API: основні ендпойнти
 
 ### Auth / Користувачі
-- `POST /api/user/register` — реєстрація користувача (пацієнт).  
-- `POST /api/user/login` — логін користувача, повертає JWT.  
-- `GET /api/user/get-profile` — отримати профіль користувача (Bearer token).  
-- `POST /api/user/update-profile` — оновити профіль (Bearer token, можна з аватаркою).  
+- `POST /api/user/register` ‒ реєстрація користувача (пацієнт).  
+- `POST /api/user/login` ‒ логін користувача, повертає JWT.  
+- `GET /api/user/get-profile` ‒ отримати профіль користувача (Bearer token).  
+- `POST /api/user/update-profile` ‒ оновити профіль (Bearer token, можна з аватаркою).  
 
 ### Appointments / Зустрічі користувача
-- `POST /api/user/book-appointment` — забронювати зустріч (Bearer token).  
-- `GET /api/user/appointments` — список зустрічей користувача.  
-- `POST /api/user/cancel-appointment` — скасувати зустріч.  
-- `POST /api/user/payment-razorpay` — ініціювати оплату.  
-- `POST /api/user/verifyRazorpay` — підтвердити оплату.
+- `POST /api/user/book-appointment` ‒ забронювати зустріч (Bearer token).  
+- `GET /api/user/appointments` ‒ список зустрічей користувача.  
+- `POST /api/user/cancel-appointment` ‒ скасувати зустріч.  
+- `POST /api/user/payment-razorpay` ‒ ініціювати оплату.  
+- `POST /api/user/verifyRazorpay` ‒ підтвердити оплату.
 
 ### Doctor / Лікар
-- `GET /api/doctor/list` — список лікарів.  
-- `POST /api/doctor/login` — логін лікаря, повертає JWT.  
-- `GET /api/doctor/appointments` — список зустрічей лікаря (Bearer token).  
-- `POST /api/doctor/appointment-complete` — позначити зустріч як завершену.  
-- `POST /api/doctor/appointment-cancel` — скасувати зустріч.  
-- `GET /api/doctor/dashboard` — інформаційна панель лікаря.
+- `GET /api/doctor/list` ‒ список лікарів.  
+- `POST /api/doctor/login` ‒ логін лікаря, повертає JWT.  
+- `GET /api/doctor/appointments` ‒ список зустрічей лікаря (Bearer token).  
+- `POST /api/doctor/appointment-complete` ‒ позначити зустріч як завершену.  
+- `POST /api/doctor/appointment-cancel` ‒ скасувати зустріч.  
+- `GET /api/doctor/dashboard` ‒ інформаційна панель лікаря.
 
 ### Admin / Адміністратор
-- `POST /api/admin/add-doctor` — додати лікаря (зображення, Bearer token).  
-- `POST /api/admin/login` — логін адміністратора.  
-- `POST /api/admin/all-doctors` — отримати список усіх лікарів.  
-- `POST /api/admin/change-availability` — змінити доступність лікаря.  
-- `GET /api/admin/appointments` — список усіх зустрічей.  
-- `POST /api/admin/cancel-appointment` — скасувати будь-яку зустріч.  
-- `GET /api/admin/dashboard` — інформаційна панель адміністратора.
+- `POST /api/admin/add-doctor` ‒ додати лікаря (зображення, Bearer token).  
+- `POST /api/admin/login` ‒ логін адміністратора.  
+- `POST /api/admin/all-doctors` ‒ отримати список усіх лікарів.  
+- `POST /api/admin/change-availability` ‒ змінити доступність лікаря.  
+- `GET /api/admin/appointments` ‒ список усіх зустрічей.  
+- `POST /api/admin/cancel-appointment` ‒ скасувати будь-яку зустріч.  
+- `GET /api/admin/dashboard` ‒ інформаційна панель адміністратора.
 
 
 ## База даних та примітки
 - Mongoose використовується для роботи з MongoDB: зберігання користувачів, зустрічей, ролей та оплати.
-- Моделі: User, Appointment, Payment (за наявності).  
+- Моделі: Users, DoctorsDB, Appointments.  
 
 ## Скріншоти
 
